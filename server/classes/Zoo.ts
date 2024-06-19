@@ -15,13 +15,4 @@ export class Zoo implements ZooInterface {
     set paddocks(value: Array<PaddockInterface>) {
         this._paddocks = value;
     }
-
-    addPaddock(paddock: PaddockInterface): void {
-        this._paddocks.push(paddock);
-    }
-
-    removePaddock(paddock: PaddockInterface): void {
-        let index = this._paddocks.indexOf(paddock);
-        this._paddocks.slice(index, 1);
-    }
 }

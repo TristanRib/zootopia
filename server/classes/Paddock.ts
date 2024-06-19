@@ -54,13 +54,4 @@ export class Paddock implements PaddockInterface {
     set animals(value: Array<AnimalInterface>) {
         this._animals = value;
     }
-
-    public addAnimal(animal: AnimalInterface) {
-        this._animals.push(animal);
-    }
-
-    public removeAnimal(animal: AnimalInterface) {
-        let index = this._animals.indexOf(animal);
-        this._animals.slice(index, 1);
-    }
 }

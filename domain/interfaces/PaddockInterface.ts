@@ -5,8 +5,6 @@ import {SizeEnum} from "../../server/enums/SizeEnum";
 export interface PaddockInterface {
     get uid(): string;
 
-    set uid(value: string);
-
     get name(): string;
 
     set name(value: string);
@@ -22,8 +20,4 @@ export interface PaddockInterface {
     get animals(): Array<AnimalInterface>;
 
     set animals(value: Array<AnimalInterface>);
-
-    addAnimal(animal: AnimalInterface): void;
-
-    removeAnimal(animal: AnimalInterface): void;
 }
