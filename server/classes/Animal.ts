@@ -1,6 +1,7 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
+import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
 
-export class Animal {
+export class Animal implements AnimalInterface {
     private _uid: string;
     private _name: string;
     private _age: number;

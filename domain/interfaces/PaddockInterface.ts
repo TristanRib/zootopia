@@ -1,5 +1,5 @@
-import {Animal} from "../classes/Animal";
-import {SpecieEnum} from "../enums/SpecieEnum";
+import {Animal} from "../../server/classes/Animal";
+import {SpecieEnum} from "../../server/enums/SpecieEnum";
 
 export interface PaddockInterface {
     get animals(): Array<Animal>;

@@ -1,4 +1,4 @@
-import {Paddock} from "../classes/Paddock";
+import {Paddock} from "../../server/classes/Paddock";
 
 export interface ZooInterface {
     get paddocks(): Array<Paddock>;

@@ -1,4 +1,4 @@
-import {PaddockInterface} from "../../server/interfaces/PaddockInterface";
+import {PaddockInterface} from "../interfaces/PaddockInterface";
 import {Animal} from "../../server/classes/Animal";
 
 export class PaddockService {

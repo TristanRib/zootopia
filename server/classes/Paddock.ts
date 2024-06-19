@@ -1,6 +1,6 @@
 import {Animal} from "./Animal";
 import {SpecieEnum} from "../enums/SpecieEnum";
-import {PaddockInterface} from "../interfaces/PaddockInterface";
+import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
 
 export class Paddock implements PaddockInterface {
     private _uid: string;

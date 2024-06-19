@@ -1,5 +1,5 @@
 import {Paddock} from "./Paddock";
-import {ZooInterface} from "../interfaces/ZooInterface";
+import {ZooInterface} from "../../domain/interfaces/ZooInterface";
 
 export class Zoo implements ZooInterface {
     private _paddocks: Array<Paddock>;
