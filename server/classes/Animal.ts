@@ -1,14 +1,15 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
 import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
+import {v4 as uid} from "uuid";
 
 export class Animal implements AnimalInterface {
-    private _uid: string;
+    private readonly _uid: string;
     private _name: string;
     private _age: number;
     private _specie: SpecieEnum;
 
-    constructor(uid: string, name: string, age: number, specie: SpecieEnum) {
-        this._uid = uid;
+    constructor(name: string, age: number, specie: SpecieEnum) {
+        this._uid = uid();
         this._name = name;
         this._age = age;
         this._specie = specie;
@@ -16,10 +17,6 @@ export class Animal implements AnimalInterface {
 
     get uid(): string {
         return this._uid;
-    }
-
-    set uid(value: string) {
-        this._uid = value;
     }
 
     get name(): string {

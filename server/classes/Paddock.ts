@@ -1,16 +1,17 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
 import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
 import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
+import {v4 as uid} from "uuid";
 
 export class Paddock implements PaddockInterface {
-    private _uid: string;
+    private readonly _uid: string;
     private _name: string;
     private _size: SizeEnum;
     private _authorizedSpecies: Array<SpecieEnum>;
     private _animals: Array<AnimalInterface>;
 
-    constructor(uid: string, name: string, size: SizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<AnimalInterface>) {
-        this._uid = uid;
+    constructor(name: string, size: SizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<AnimalInterface>) {
+        this._uid = uid();
         this._name = name;
         this._size = size;
         this._authorizedSpecies = authorizedSpecies;
@@ -19,10 +20,6 @@ export class Paddock implements PaddockInterface {
 
     get uid(): string {
         return this._uid;
-    }
-
-    set uid(value: string) {
-        this._uid = value;
     }
 
     get name(): string {
