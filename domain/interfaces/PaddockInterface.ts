@@ -1,5 +1,6 @@
 import {SpecieEnum} from "../../server/enums/SpecieEnum";
 import {AnimalInterface} from "./AnimalInterface";
+import {SizeEnum} from "../../server/enums/SizeEnum";
 
 export interface PaddockInterface {
     get uid(): string;

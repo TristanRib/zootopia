@@ -2,8 +2,7 @@
 import {Paddock} from '../server/classes/Paddock';
 import {Animal} from "../server/classes/Animal";
 import {SpecieEnum} from "../server/enums/SpecieEnum";
-
-jest.mock('../server/classes/Paddock');
+import {SizeEnum} from "../server/enums/SizeEnum";
 
 describe('Paddock', () => {
 

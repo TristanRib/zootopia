@@ -2,8 +2,6 @@
 import {Animal} from '../server/classes/Animal';
 import {SpecieEnum} from "../server/enums/SpecieEnum";
 
-jest.mock('../server/classes/Animal');
-
 describe('Animal', () => {
     // GIVEN
     let animal: Animal;
@@ -18,7 +16,7 @@ describe('Animal', () => {
 
         expect(animal.name).toBe('TigerName');
         expect(animal.age).toBe(5);
-        expect(animal.specie).toBe(SpecieEnum.Equine);
+        expect(animal.specie).toBe(SpecieEnum.Feline);
     });
 
     it('should be modified', () => {

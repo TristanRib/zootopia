@@ -2,6 +2,7 @@ import {SpecieEnum} from "../enums/SpecieEnum";
 import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
 import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
 import {v4 as uid} from "uuid";
+import {SizeEnum} from "../enums/SizeEnum";
 
 export class Paddock implements PaddockInterface {
     private readonly _uid: string;
