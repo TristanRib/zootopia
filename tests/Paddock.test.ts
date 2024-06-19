@@ -1,9 +1,9 @@
 // Paddock.test.ts
-import {Paddock} from '../domain/classes/Paddock';
-import {Animal} from "../domain/classes/Animal";
-import {SpecieEnum} from "../domain/enums/SpecieEnum";
+import {Paddock} from '../server/classes/Paddock';
+import {Animal} from "../server/classes/Animal";
+import {SpecieEnum} from "../server/enums/SpecieEnum";
 
-jest.mock('../domain/classes/Paddock');
+jest.mock('../server/classes/Paddock');
 
 describe('Paddock', () => {
 

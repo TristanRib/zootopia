@@ -1,7 +1,8 @@
 import {Animal} from "./Animal";
 import {SpecieEnum} from "../enums/SpecieEnum";
+import {PaddockInterface} from "../interfaces/PaddockInterface";
 
-export class Paddock {
+export class Paddock implements PaddockInterface {
     private _uid: string;
     private _name: string;
     private _size: SizeEnum;
@@ -54,5 +55,14 @@ export class Paddock {
 
     set animals(value: Array<Animal>) {
         this._animals = value;
+    }
+
+    public addAnimal(animal: Animal) {
+        this._animals.push(animal);
+    }
+
+    public removeAnimal(animal: Animal) {
+        let index = this._animals.indexOf(animal);
+        this._animals.slice(index, 1);
     }
 }

@@ -1,8 +1,8 @@
 // Tiger.test.ts
-import {Animal} from '../domain/classes/Animal';
-import {SpecieEnum} from "../domain/enums/SpecieEnum";
+import {Animal} from '../server/classes/Animal';
+import {SpecieEnum} from "../server/enums/SpecieEnum";
 
-jest.mock('../domain/classes/Animal');
+jest.mock('../server/classes/Animal');
 
 describe('Animal', () => {
     // GIVEN
