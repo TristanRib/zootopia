@@ -9,14 +9,13 @@ describe('Animal', () => {
     let animal: Animal;
 
     beforeEach(() => {
-        animal = new Animal('1', 'TigerName', 5, SpecieEnum.Feline);
+        animal = new Animal('TigerName', 5, SpecieEnum.Feline);
     });
 
     it('should be as created', () => {
         // THEN
         expect(animal).toBeInstanceOf(Animal);
 
-        expect(animal.uid).toBe('1');
         expect(animal.name).toBe('TigerName');
         expect(animal.age).toBe(5);
         expect(animal.specie).toBe(SpecieEnum.Equine);
