@@ -1,15 +1,15 @@
-import {Animal} from "./Animal";
 import {SpecieEnum} from "../enums/SpecieEnum";
 import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
+import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
 
 export class Paddock implements PaddockInterface {
     private _uid: string;
     private _name: string;
     private _size: SizeEnum;
     private _authorizedSpecies: Array<SpecieEnum>;
-    private _animals: Array<Animal>;
+    private _animals: Array<AnimalInterface>;
 
-    constructor(uid: string, name: string, size: SizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<Animal>) {
+    constructor(uid: string, name: string, size: SizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<AnimalInterface>) {
         this._uid = uid;
         this._name = name;
         this._size = size;
@@ -49,19 +49,19 @@ export class Paddock implements PaddockInterface {
         this._authorizedSpecies = value;
     }
 
-    get animals(): Array<Animal> {
+    get animals(): Array<AnimalInterface> {
         return this._animals;
     }
 
-    set animals(value: Array<Animal>) {
+    set animals(value: Array<AnimalInterface>) {
         this._animals = value;
     }
 
-    public addAnimal(animal: Animal) {
+    public addAnimal(animal: AnimalInterface) {
         this._animals.push(animal);
     }
 
-    public removeAnimal(animal: Animal) {
+    public removeAnimal(animal: AnimalInterface) {
         let index = this._animals.indexOf(animal);
         this._animals.slice(index, 1);
     }

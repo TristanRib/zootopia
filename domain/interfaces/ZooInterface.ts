@@ -1,9 +1,11 @@
-import {Paddock} from "../../server/classes/Paddock";
+import {PaddockInterface} from "./PaddockInterface";
 
 export interface ZooInterface {
-    get paddocks(): Array<Paddock>;
+    get paddocks(): Array<PaddockInterface>;
 
-    addPaddock(paddock: Paddock): void;
+    set paddocks(value: Array<PaddockInterface>);
 
-    removePaddock(paddock: Paddock): void;
+    addPaddock(paddock: PaddockInterface): void;
+
+    removePaddock(paddock: PaddockInterface): void;
 }

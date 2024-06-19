@@ -1,12 +1,28 @@
-import {Animal} from "../../server/classes/Animal";
 import {SpecieEnum} from "../../server/enums/SpecieEnum";
+import {AnimalInterface} from "./AnimalInterface";
 
 export interface PaddockInterface {
-    get animals(): Array<Animal>;
+    get uid(): string;
+
+    set uid(value: string);
+
+    get name(): string;
+
+    set name(value: string);
+
+    get size(): SizeEnum;
+
+    set size(value: SizeEnum);
 
     get authorizedSpecies(): Array<SpecieEnum>;
 
-    addAnimal(animal: Animal): void;
+    set authorizedSpecies(value: Array<SpecieEnum>);
 
-    removeAnimal(animal: Animal): void;
+    get animals(): Array<AnimalInterface>;
+
+    set animals(value: Array<AnimalInterface>);
+
+    addAnimal(animal: AnimalInterface): void;
+
+    removeAnimal(animal: AnimalInterface): void;
 }
