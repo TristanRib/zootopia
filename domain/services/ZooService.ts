@@ -11,7 +11,7 @@ export class ZooService {
     }
 
     static destroyPaddock(zoo: ZooInterface, paddock: PaddockInterface) {
-        if (zoo.paddocks.includes(paddock) && paddock.animals.length === 0) {
+        if (paddock.animals.length === 0) {
             this.adapter.removePaddock(paddock, zoo);
         }
     }

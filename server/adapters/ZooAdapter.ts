@@ -9,6 +9,8 @@ export class ZooAdapter implements ZooAdapterInterface {
 
     removePaddock(paddock: PaddockInterface, zoo: ZooInterface): void {
         let index = zoo.paddocks.indexOf(paddock);
-        zoo.paddocks.slice(index, 1);
+        if (index != -1) {
+            zoo.paddocks.slice(index, 1);
+        }
     }
 }

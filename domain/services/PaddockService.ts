@@ -13,8 +13,6 @@ export class PaddockService {
     }
 
     static unassignAnimal(paddock: PaddockInterface, animal: AnimalInterface) {
-        if (paddock.animals.includes(animal)) {
-            this.adapter.removeAnimal(animal, paddock);
-        }
+        this.adapter.removeAnimal(animal, paddock);
     }
 }
