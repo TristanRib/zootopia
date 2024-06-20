@@ -1,5 +1,5 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
-import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
+import {AnimalInterface} from "../interfaces/AnimalInterface";
 import {v4 as uid} from "uuid";
 
 export class Animal implements AnimalInterface {

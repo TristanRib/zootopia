@@ -1,16 +1,16 @@
 import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
-import {ZooAdapterInterface} from "../../domain/interfaces/ZooAdapterInterface";
+import {ZooAdapterInterface} from "../interfaces/ZooAdapterInterface";
 import {ZooInterface} from "../../domain/interfaces/ZooInterface";
 
 export class ZooAdapter implements ZooAdapterInterface {
-    addPaddock(paddock: PaddockInterface, zoo: ZooInterface): void {
+    addPaddock(zoo: ZooInterface, paddock: PaddockInterface): void {
         zoo.paddocks.push(paddock);
     }
 
-    removePaddock(paddock: PaddockInterface, zoo: ZooInterface): void {
+    removePaddock(zoo: ZooInterface, paddock: PaddockInterface): void {
         let index = zoo.paddocks.indexOf(paddock);
-        if (index != -1) {
-            zoo.paddocks.slice(index, 1);
+        if (index >= 0) {
+            zoo.paddocks.splice(index, 1);
         }
     }
 }

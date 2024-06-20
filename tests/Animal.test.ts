@@ -1,19 +1,20 @@
 // Tiger.test.ts
-import {Animal} from '../server/classes/Animal';
-import {SpecieEnum} from "../server/enums/SpecieEnum";
+
+import {Animal} from "../domain/classes/Animal";
+import {SpecieEnum} from "../domain/enums/SpecieEnum";
+import {AnimalInterface} from "../domain/interfaces/AnimalInterface";
 
 describe('Animal', () => {
     // GIVEN
-    let animal: Animal;
+    let animal: AnimalInterface;
 
     beforeEach(() => {
         animal = new Animal('TigerName', 5, SpecieEnum.Feline);
     });
 
-    it('should be as created', () => {
+    it('should be as expected', () => {
         // THEN
         expect(animal).toBeInstanceOf(Animal);
-
         expect(animal.name).toBe('TigerName');
         expect(animal.age).toBe(5);
         expect(animal.specie).toBe(SpecieEnum.Feline);
@@ -28,5 +29,4 @@ describe('Animal', () => {
         expect(animal.name).toBe("Maurice");
         expect(animal.age).toBe(4);
     });
-
 });

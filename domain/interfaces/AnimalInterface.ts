@@ -1,4 +1,4 @@
-import {SpecieEnum} from "../../server/enums/SpecieEnum";
+import {SpecieEnum} from "../enums/SpecieEnum";
 
 export interface AnimalInterface {
     get uid(): string;

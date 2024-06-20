@@ -1,7 +1,7 @@
 import {PaddockInterface} from "../interfaces/PaddockInterface";
 import {AnimalInterface} from "../interfaces/AnimalInterface";
 import {PaddockAdapter} from "../../server/adapters/PaddockAdapter";
-import {PaddockAdapterInterface} from "../interfaces/PaddockAdapterInterface";
+import {PaddockAdapterInterface} from "../../server/interfaces/PaddockAdapterInterface";
 
 export class PaddockService {
     private static adapter: PaddockAdapterInterface = new PaddockAdapter();

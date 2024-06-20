@@ -1,5 +1,5 @@
-import {AnimalInterface} from "./AnimalInterface";
-import {PaddockInterface} from "./PaddockInterface";
+import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
+import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
 
 export interface PaddockAdapterInterface {
     addAnimal(animal: AnimalInterface, paddock: PaddockInterface): void;

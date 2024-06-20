@@ -1,6 +1,6 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
-import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
-import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
+import {PaddockInterface} from "../interfaces/PaddockInterface";
+import {AnimalInterface} from "../interfaces/AnimalInterface";
 import {v4 as uid} from "uuid";
 import {SizeEnum} from "../enums/SizeEnum";
 
