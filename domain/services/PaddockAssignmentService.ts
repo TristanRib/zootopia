@@ -3,7 +3,7 @@ import {PaddockAdapterInterface} from "../../server/interfaces/PaddockAdapterInt
 import {Animal} from "../classes/Animal";
 import {Paddock} from "../classes/Paddock";
 
-export class PaddockService {
+export class PaddockAssignmentService {
     private static adapter: PaddockAdapterInterface = new PaddockAdapter();
 
     static assignAnimal(paddock: Paddock, animal: Animal) {

@@ -1,12 +1,15 @@
 import {Paddock} from "./Paddock";
+import {Animal} from "./Animal";
 
 export class Zoo {
     private _name: string;
-    private _paddocks: Array<Paddock>;
+    private readonly _paddocks: Array<Paddock>;
+    private readonly _animals: Array<Animal>;
 
-    constructor(name: string, paddocks: Array<Paddock>) {
+    constructor(name: string, paddocks: Array<Paddock>, animals: Array<Animal>) {
         this._name = name;
         this._paddocks = paddocks;
+        this._animals = animals;
     }
 
     get name(): string {
@@ -21,7 +24,7 @@ export class Zoo {
         return this._paddocks;
     }
 
-    set paddocks(value: Array<Paddock>) {
-        this._paddocks = value;
+    get animals(): Array<Animal> {
+        return this._animals;
     }
 }
