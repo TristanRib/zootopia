@@ -13,11 +13,12 @@ export class ZooAssignmentService {
     }
 
     public static excludeAnimal(zoo: Zoo, animal: Animal) {
-        zoo.paddocks.forEach((paddock: Paddock) => {
+        for (let paddock of zoo.paddocks) {
             if (paddock.animals.includes(animal)) {
                 PaddockAssignmentService.unassignAnimal(paddock, animal);
+                break;
             }
-        })
+        }
         this.adapter.removeAnimal(zoo, animal);
     }
 
