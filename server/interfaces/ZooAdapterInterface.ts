@@ -1,8 +1,8 @@
-import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
-import {ZooInterface} from "../../domain/interfaces/ZooInterface";
+import {Zoo} from "../../domain/classes/Zoo";
+import {Paddock} from "../../domain/classes/Paddock";
 
 export interface ZooAdapterInterface {
-    addPaddock(zoo: ZooInterface, paddock: PaddockInterface): void;
+    addPaddock(zoo: Zoo, paddock: Paddock): void;
 
-    removePaddock(zoo: ZooInterface, paddock: PaddockInterface): void;
+    removePaddock(zoo: Zoo, paddock: Paddock): void;
 }

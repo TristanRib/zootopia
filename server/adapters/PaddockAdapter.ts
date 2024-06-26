@@ -1,13 +1,13 @@
-import {AnimalInterface} from "../../domain/interfaces/AnimalInterface";
-import {PaddockInterface} from "../../domain/interfaces/PaddockInterface";
 import {PaddockAdapterInterface} from "../interfaces/PaddockAdapterInterface";
+import {Animal} from "../../domain/classes/Animal";
+import {Paddock} from "../../domain/classes/Paddock";
 
 export class PaddockAdapter implements PaddockAdapterInterface {
-    addAnimal(animal: AnimalInterface, paddock: PaddockInterface): void {
+    addAnimal(animal: Animal, paddock: Paddock): void {
         paddock.animals.push(animal);
     }
 
-    removeAnimal(animal: AnimalInterface, paddock: PaddockInterface): void {
+    removeAnimal(animal: Animal, paddock: Paddock): void {
         let index = paddock.animals.indexOf(animal);
         if (index >= 0) {
             paddock.animals.splice(index, 1);
