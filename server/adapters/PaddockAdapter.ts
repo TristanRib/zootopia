@@ -1,4 +1,4 @@
-import {ForManagingPaddocks} from "../ports/ForManagingPaddocks";
+import {ForManagingPaddocks} from "../../domain/ports/ForManagingPaddocks";
 import {Animal} from "../../domain/classes/Animal";
 import {Paddock} from "../../domain/classes/Paddock";
 

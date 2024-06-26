@@ -1,4 +1,4 @@
-import {ForManagingZoo} from "../ports/ForManagingZoo";
+import {ForManagingZoo} from "../../domain/ports/ForManagingZoo";
 import {Zoo} from "../../domain/classes/Zoo";
 import {Paddock} from "../../domain/classes/Paddock";
 import {Animal} from "../../domain/classes/Animal";

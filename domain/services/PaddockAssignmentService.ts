@@ -1,5 +1,5 @@
 import {PaddockAdapter} from "../../server/adapters/PaddockAdapter";
-import {ForManagingPaddocks} from "../../server/ports/ForManagingPaddocks";
+import {ForManagingPaddocks} from "../ports/ForManagingPaddocks";
 import {Animal} from "../classes/Animal";
 import {Paddock} from "../classes/Paddock";
 

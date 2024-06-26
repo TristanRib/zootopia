@@ -8,14 +8,13 @@ export class Paddock {
     private _name: string;
     private _size: PaddockSizeEnum;
     private _authorizedSpecies: Array<SpecieEnum>;
-    private _animals: Array<Animal>;
+    private _animals: Array<Animal> = [];
 
-    constructor(name: string, size: PaddockSizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<Animal>) {
+    constructor(name: string, size: PaddockSizeEnum, authorizedSpecies: Array<SpecieEnum>) {
         this._uid = uid();
         this._name = name;
         this._size = size;
         this._authorizedSpecies = authorizedSpecies;
-        this._animals = animals;
     }
 
     get uid(): string {

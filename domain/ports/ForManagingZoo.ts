@@ -1,6 +1,6 @@
-import {Zoo} from "../../domain/classes/Zoo";
-import {Paddock} from "../../domain/classes/Paddock";
-import {Animal} from "../../domain/classes/Animal";
+import {Zoo} from "../classes/Zoo";
+import {Paddock} from "../classes/Paddock";
+import {Animal} from "../classes/Animal";
 
 export interface ForManagingZoo {
     addPaddock(zoo: Zoo, paddock: Paddock): void;

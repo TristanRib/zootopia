@@ -1,5 +1,5 @@
 import {ZooAdapter} from "../../server/adapters/ZooAdapter";
-import {ForManagingZoo} from "../../server/ports/ForManagingZoo";
+import {ForManagingZoo} from "../ports/ForManagingZoo";
 import {Zoo} from "../classes/Zoo";
 import {Animal} from "../classes/Animal";
 import {Paddock} from "../classes/Paddock";
