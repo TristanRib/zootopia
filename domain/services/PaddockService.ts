@@ -7,7 +7,7 @@ export class PaddockService {
     private static adapter: PaddockAdapterInterface = new PaddockAdapter();
 
     static assignAnimal(paddock: Paddock, animal: Animal) {
-        if (this.isAnimalSpecieAuthorized(paddock, animal)) {
+        if (this.isAnimalSpecieAuthorized(paddock, animal) && !this.isPaddockFull(paddock)) {
             this.adapter.addAnimal(animal, paddock);
         }
         return paddock;
@@ -20,6 +20,10 @@ export class PaddockService {
 
     private static isAnimalSpecieAuthorized(paddock: Paddock, animal: Animal) {
         return paddock.authorizedSpecies.includes(animal.specie);
+    }
+
+    private static isPaddockFull(paddock: Paddock) {
+        return paddock.size == paddock.animals.length;
     }
 
     static doesPaddockContainAnimals(paddock: Paddock) {

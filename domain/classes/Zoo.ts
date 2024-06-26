@@ -1,12 +1,10 @@
-import {ZooInterface} from "../interfaces/ZooInterface";
-import {PaddockInterface} from "../interfaces/PaddockInterface";
-import {name} from "ts-jest/dist/transformers/hoist-jest";
+import {Paddock} from "./Paddock";
 
-export class Zoo implements ZooInterface {
+export class Zoo {
     private _name: string;
-    private _paddocks: Array<PaddockInterface>;
+    private _paddocks: Array<Paddock>;
 
-    constructor(name: string, paddocks: Array<PaddockInterface>) {
+    constructor(name: string, paddocks: Array<Paddock>) {
         this._name = name;
         this._paddocks = paddocks;
     }
@@ -19,11 +17,11 @@ export class Zoo implements ZooInterface {
         this._name = value;
     }
 
-    get paddocks(): Array<PaddockInterface> {
+    get paddocks(): Array<Paddock> {
         return this._paddocks;
     }
 
-    set paddocks(value: Array<PaddockInterface>) {
+    set paddocks(value: Array<Paddock>) {
         this._paddocks = value;
     }
 }

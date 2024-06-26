@@ -1,17 +1,16 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
-import {AnimalInterface} from "../interfaces/AnimalInterface";
 import {v4 as uid} from "uuid";
 
-export class Animal implements AnimalInterface {
+export class Animal {
     private readonly _uid: string;
     private _name: string;
-    private _age: number;
+    private readonly _dateOfBirth: Date;
     private _specie: SpecieEnum;
 
-    constructor(name: string, age: number, specie: SpecieEnum) {
+    constructor(name: string, dateOfBirth: Date, specie: SpecieEnum) {
         this._uid = uid();
         this._name = name;
-        this._age = age;
+        this._dateOfBirth = dateOfBirth;
         this._specie = specie;
     }
 
@@ -28,11 +27,12 @@ export class Animal implements AnimalInterface {
     }
 
     get age(): number {
-        return this._age;
+        let diff = Date.now() - this._dateOfBirth.getTime();
+        return Math.abs(new Date(diff).getUTCFullYear() - 1970);
     }
 
-    set age(value: number) {
-        this._age = value;
+    get dateOfBirth(): Date {
+        return this._dateOfBirth;
     }
 
     get specie(): SpecieEnum {

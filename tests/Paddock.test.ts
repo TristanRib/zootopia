@@ -1,7 +1,7 @@
 // Paddock.test.ts
 import {PaddockService} from "../domain/services/PaddockService";
 import {Paddock} from "../domain/classes/Paddock";
-import {SizeEnum} from "../domain/enums/SizeEnum";
+import {PaddockSizeEnum} from "../domain/enums/PaddockSizeEnum";
 import {SpecieEnum} from "../domain/enums/SpecieEnum";
 import {Animal} from "../domain/classes/Animal";
 import {PaddockInterface} from "../domain/interfaces/PaddockInterface";
@@ -12,14 +12,14 @@ describe('Paddock', () => {
     let paddock: PaddockInterface;
 
     beforeEach(() => {
-        paddock = new Paddock('Southern Paddock', SizeEnum.Small, [SpecieEnum.Feline], []);
+        paddock = new Paddock('Southern Paddock', PaddockSizeEnum.Small, [SpecieEnum.Feline], []);
     });
 
     it('should be as expected', () => {
         // THEN
         expect(paddock).toBeInstanceOf(Paddock);
         expect(paddock.name).toBe('Southern Paddock');
-        expect(paddock.size).toBe(SizeEnum.Small);
+        expect(paddock.size).toBe(PaddockSizeEnum.Small);
         expect(paddock.authorizedSpecies).toStrictEqual([SpecieEnum.Feline]);
         expect(paddock.animals.length).toBe(0);
     });

@@ -1,17 +1,16 @@
 import {SpecieEnum} from "../enums/SpecieEnum";
-import {PaddockInterface} from "../interfaces/PaddockInterface";
-import {AnimalInterface} from "../interfaces/AnimalInterface";
 import {v4 as uid} from "uuid";
-import {SizeEnum} from "../enums/SizeEnum";
+import {PaddockSizeEnum} from "../enums/PaddockSizeEnum";
+import {Animal} from "./Animal";
 
-export class Paddock implements PaddockInterface {
+export class Paddock {
     private readonly _uid: string;
     private _name: string;
-    private _size: SizeEnum;
+    private _size: PaddockSizeEnum;
     private _authorizedSpecies: Array<SpecieEnum>;
-    private _animals: Array<AnimalInterface>;
+    private _animals: Array<Animal>;
 
-    constructor(name: string, size: SizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<AnimalInterface>) {
+    constructor(name: string, size: PaddockSizeEnum, authorizedSpecies: Array<SpecieEnum>, animals: Array<Animal>) {
         this._uid = uid();
         this._name = name;
         this._size = size;
@@ -31,11 +30,11 @@ export class Paddock implements PaddockInterface {
         this._name = value;
     }
 
-    get size(): SizeEnum {
+    get size(): PaddockSizeEnum {
         return this._size;
     }
 
-    set size(value: SizeEnum) {
+    set size(value: PaddockSizeEnum) {
         this._size = value;
     }
 
@@ -47,11 +46,11 @@ export class Paddock implements PaddockInterface {
         this._authorizedSpecies = value;
     }
 
-    get animals(): Array<AnimalInterface> {
+    get animals(): Array<Animal> {
         return this._animals;
     }
 
-    set animals(value: Array<AnimalInterface>) {
+    set animals(value: Array<Animal>) {
         this._animals = value;
     }
 }

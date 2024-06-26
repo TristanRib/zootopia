@@ -6,7 +6,7 @@ import {Animal} from "../domain/classes/Animal";
 import {Zoo} from "../domain/classes/Zoo";
 import {ZooService} from "../domain/services/ZooService";
 import {ZooInterface} from "../domain/interfaces/ZooInterface";
-import {SizeEnum} from "../domain/enums/SizeEnum";
+import {PaddockSizeEnum} from "../domain/enums/PaddockSizeEnum";
 import {PaddockInterface} from "../domain/interfaces/PaddockInterface";
 
 describe('Zoo', () => {
@@ -17,7 +17,7 @@ describe('Zoo', () => {
 
     beforeEach(() => {
         zoo = new Zoo('Zootopia', []);
-        paddock = new Paddock('Southern Paddock', SizeEnum.Small, [SpecieEnum.Feline], []);
+        paddock = new Paddock('Southern Paddock', PaddockSizeEnum.Small, [SpecieEnum.Feline], []);
     });
 
     it('should be able to build paddocks', () => {
