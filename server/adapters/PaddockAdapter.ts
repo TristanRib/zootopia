@@ -1,8 +1,8 @@
-import {PaddockAdapterInterface} from "../interfaces/PaddockAdapterInterface";
+import {ForManagingPaddocks} from "../ports/ForManagingPaddocks";
 import {Animal} from "../../domain/classes/Animal";
 import {Paddock} from "../../domain/classes/Paddock";
 
-export class PaddockAdapter implements PaddockAdapterInterface {
+export class PaddockAdapter implements ForManagingPaddocks {
     addAnimal(animal: Animal, paddock: Paddock): void {
         paddock.animals.push(animal);
     }

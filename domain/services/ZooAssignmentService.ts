@@ -1,15 +1,15 @@
 import {ZooAdapter} from "../../server/adapters/ZooAdapter";
-import {ZooAdapterInterface} from "../../server/interfaces/ZooAdapterInterface";
+import {ForManagingZoo} from "../../server/ports/ForManagingZoo";
 import {Zoo} from "../classes/Zoo";
 import {Animal} from "../classes/Animal";
 import {Paddock} from "../classes/Paddock";
 import {PaddockAssignmentService} from "./PaddockAssignmentService";
 
 export class ZooAssignmentService {
-    private static adapter: ZooAdapterInterface = new ZooAdapter();
+    private static port: ForManagingZoo = new ZooAdapter();
 
     public static welcomeAnimal(zoo: Zoo, animal: Animal) {
-        this.adapter.addAnimal(zoo, animal);
+        this.port.addAnimal(zoo, animal);
     }
 
     public static excludeAnimal(zoo: Zoo, animal: Animal) {
@@ -19,7 +19,7 @@ export class ZooAssignmentService {
                 break;
             }
         }
-        this.adapter.removeAnimal(zoo, animal);
+        this.port.removeAnimal(zoo, animal);
     }
 
     public static assignAnimal(zoo: Zoo, paddock: Paddock, animal: Animal) {

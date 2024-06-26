@@ -1,20 +1,20 @@
 import {PaddockAdapter} from "../../server/adapters/PaddockAdapter";
-import {PaddockAdapterInterface} from "../../server/interfaces/PaddockAdapterInterface";
+import {ForManagingPaddocks} from "../../server/ports/ForManagingPaddocks";
 import {Animal} from "../classes/Animal";
 import {Paddock} from "../classes/Paddock";
 
 export class PaddockAssignmentService {
-    private static adapter: PaddockAdapterInterface = new PaddockAdapter();
+    private static port: ForManagingPaddocks = new PaddockAdapter();
 
     public static assignAnimal(paddock: Paddock, animal: Animal) {
         if (this.isAnimalSpecieAuthorized(paddock, animal) && !this.isPaddockFull(paddock)) {
-            this.adapter.addAnimal(animal, paddock);
+            this.port.addAnimal(animal, paddock);
         }
         return paddock;
     }
 
     public static unassignAnimal(paddock: Paddock, animal: Animal) {
-        this.adapter.removeAnimal(animal, paddock);
+        this.port.removeAnimal(animal, paddock);
         return paddock;
     }
 

@@ -1,9 +1,9 @@
-import {ZooAdapterInterface} from "../interfaces/ZooAdapterInterface";
+import {ForManagingZoo} from "../ports/ForManagingZoo";
 import {Zoo} from "../../domain/classes/Zoo";
 import {Paddock} from "../../domain/classes/Paddock";
 import {Animal} from "../../domain/classes/Animal";
 
-export class ZooAdapter implements ZooAdapterInterface {
+export class ZooAdapter implements ForManagingZoo {
     addPaddock(zoo: Zoo, paddock: Paddock): void {
         zoo.paddocks.push(paddock);
     }

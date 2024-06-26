@@ -2,7 +2,7 @@ import {Zoo} from "../../domain/classes/Zoo";
 import {Paddock} from "../../domain/classes/Paddock";
 import {Animal} from "../../domain/classes/Animal";
 
-export interface ZooAdapterInterface {
+export interface ForManagingZoo {
     addPaddock(zoo: Zoo, paddock: Paddock): void;
 
     removePaddock(zoo: Zoo, paddock: Paddock): void;
